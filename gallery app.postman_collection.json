@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "09cd615f-d4fc-4d11-bf21-98b1f6c0a976",
+		"name": "gallery app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22138681"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9nYWxsZXJ5LWFwaS52aXZpZnlpZGVhcy5jb21cL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE2NTgzMzIzNTksImV4cCI6MTY1ODMzNTk1OSwibmJmIjoxNjU4MzMyMzU5LCJqdGkiOiJKdWNzWXlORjZNcjFGUk9XIiwic3ViIjoyNjAsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Qpcbw46aKa-H3oMjLhUDZAEEBHijJjJ2XlzhSXEtpOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"first_name\":\"test1\",\"last_name\":\"test\",\"email\":\"{{EMAIL}}\",\"password\":\"{{PASSWORD}}\",\"password_confirmation\":\"{{PASSWORD}}\",\"terms_and_conditions\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/auth/register",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9nYWxsZXJ5LWFwaS52aXZpZnlpZGVhcy5jb21cL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE2NTgzMzIzNTksImV4cCI6MTY1ODMzNTk1OSwibmJmIjoxNjU4MzMyMzU5LCJqdGkiOiJKdWNzWXlORjZNcjFGUk9XIiwic3ViIjoyNjAsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Qpcbw46aKa-H3oMjLhUDZAEEBHijJjJ2XlzhSXEtpOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"{{EMAIL}}\",\"password\":\"{{PASSWORD}}\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/auth/logout",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gallery",
+			"item": [
+				{
+					"name": "Create gallery",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create gallery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"gallerytest1234\",\"description\":\"test123\",\"images\":[\"https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg\"]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/galleries",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"galleries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit gallery",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Edit gallery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9nYWxsZXJ5LWFwaS52aXZpZnlpZGVhcy5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTgzMzY0NjUsImV4cCI6MTY1ODM0MDA2NSwibmJmIjoxNjU4MzM2NDY1LCJqdGkiOiJNR3BnZDVoUndEY0Z3bTRzIiwic3ViIjoyNjgsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.OW5GoZBnxY2jBKa3gN8bVugpC04JatdO6FZyM2aT_I0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"gallerytest12345\",\r\n    \"description\": \"edit\",\r\n    \"images\": [\r\n        \"https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/galleries/{{id}}",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"galleries",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete gallery",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/galleries/261",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"galleries",
+								"261"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Add comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gallery_id\": {{id}},\r\n    \"body\": \"asdasdasdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/comments",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://gallery-api.vivifyideas.com/api/comments/{{id}}",
+							"protocol": "https",
+							"host": [
+								"gallery-api",
+								"vivifyideas",
+								"com"
+							],
+							"path": [
+								"api",
+								"comments",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All Galleries",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "User Galleries",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9nYWxsZXJ5LWFwaS52aXZpZnlpZGVhcy5jb21cL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE2NTgzMzM1MjMsImV4cCI6MTY1ODMzNzEyMywibmJmIjoxNjU4MzMzNTIzLCJqdGkiOiJqWnRTV2RjWEtreGllZFYwIiwic3ViIjoyNjMsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Ykrf_xSJr9MatX2ls2IqEIY84KWH5oM_t6pHo7iNjoU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "EMAIL",
+			"value": "test@email.com",
+			"type": "string"
+		},
+		{
+			"key": "PASSWORD",
+			"value": "12345678",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9nYWxsZXJ5LWFwaS52aXZpZnlpZGVhcy5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NTgzMzY0NjUsImV4cCI6MTY1ODM0MDA2NSwibmJmIjoxNjU4MzM2NDY1LCJqdGkiOiJNR3BnZDVoUndEY0Z3bTRzIiwic3ViIjoyNjgsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.OW5GoZBnxY2jBKa3gN8bVugpC04JatdO6FZyM2aT_I0",
+			"type": "string"
+		},
+		{
+			"key": "NAME",
+			"value": "test",
+			"type": "string"
+		},
+		{
+			"key": "LASTNAME",
+			"value": "test",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "264",
+			"type": "string"
+		}
+	]
+}
